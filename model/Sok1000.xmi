@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ra:Course xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ra="platform:/reesource/EconomicsProgramm01/model/ra.ecore"
+    xsi:schemaLocation="platform:/reesource/EconomicsProgramm01/model/ra.ecore ra.ecore"
+    code="SØK1000"
+    Credits="15.0"
+    Period="Automn"
+    Year="1">
+  <label>Introduction to Economics</label>
+  <label>Innføring i samfunnsøkonomi</label>
+</ra:Course>
