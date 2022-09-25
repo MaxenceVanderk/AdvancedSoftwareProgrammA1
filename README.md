@@ -1,5 +1,5 @@
 # AdvancedSoftwareProgrammA1
-Assignement 1
+Assignement 1 Maxence Vanderkelen
 The model presented is that of an NTNU page for economics studies.
 The courses, the department and the professors are the classes used in this model
 
