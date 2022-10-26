@@ -1,24 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="GenDepartment" nsURI="Assignment2::main::GenDepartment" startHeaderPosition="29" endHeaderPosition="188">
+  <mtl:Module name="GenDepartment" nsURI="Assignment2::main::GenDepartment" startHeaderPosition="29" endHeaderPosition="178">
     <input>
       <takesTypesFrom href="platform:/resource/EconomicsProgramm01/model/ra.ecore#/"/>
     </input>
     <ownedModuleElement xsi:type="mtl:Template" name="generateDepartment" visibility="Public" main="true">
       <body xsi:type="mtl:FileBlock" openMode="OverWrite">
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="hello&#xA;"/>
-        <fileUrl xsi:type="ocl.ecore:PropertyCallExp">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;html>&#xA;&lt;h1>"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <source xsi:type="ocl.ecore:VariableExp" name="aDepartment" referredVariable="/0/generateDepartment/aDepartment">
+          <source xsi:type="ocl.ecore:VariableExp" name="d" referredVariable="/0/generateDepartment/d">
             <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Department"/>
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Department/Name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" Department&lt;h1>&#xA;&#xA;&lt;h4>You will find below the courses of the Master in Economics programme for the first 2 years &#xA;&lt;/h4>&#xA;&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;p>&#xA;&#x9;&lt;h4>Emnekode: "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generateDepartment/%/%.3/c">
+              <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course/code"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/h4>&#xA;&#x9;&lt;h4>Emnenavn: "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(String)">
+            <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generateDepartment/%/%.3/c">
+              <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course/label"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/h4>&#xA;&#x9;&lt;h4>Studiepoeng: "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generateDepartment/%/%.3/c">
+              <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course/Credits"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/h4>&#xA;&#x9;&lt;h4>År: "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generateDepartment/%/%.3/c">
+              <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course/Year"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/h4>&#xA;&#x9;-----------------------------------------------------&lt;/p>&#xA;"/>
+          <loopVariable name="c">
+            <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(Course)">
+            <source xsi:type="ocl.ecore:VariableExp" name="d" referredVariable="/0/generateDepartment/d">
+              <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Department"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Department/Courses"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;&#xA;&lt;html>&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/+">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="d" referredVariable="/0/generateDepartment/d">
+              <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Department"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Department/Name"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".html">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
         </fileUrl>
         <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </charset>
       </body>
-      <parameter name="aDepartment">
+      <parameter name="d">
         <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Department"/>
       </parameter>
     </ownedModuleElement>
@@ -28,6 +86,13 @@
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
       </eAnnotations>
+      <eOperations name="+">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="other">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        </eParameters>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
@@ -49,7 +114,7 @@
         </eAnnotations>
         <eAnnotations source="MTL" references="/0/generateDepartment"/>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <eParameters name="aDepartment">
+        <eParameters name="d">
           <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Department"/>
         </eParameters>
       </eOperations>
@@ -99,42 +164,192 @@
     <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Department"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Department"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Course)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(String)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Department"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Course"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/resource/EconomicsProgramm01/model/ra.ecore#//Department"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generateDepartment">
       <details key="start" value="111"/>
-      <details key="end" value="258"/>
+      <details key="end" value="613"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateDepartment/%">
-      <details key="start" value="191"/>
-      <details key="end" value="246"/>
+      <details key="start" value="181"/>
+      <details key="end" value="601"/>
       <details key="line" value="7"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateDepartment/%/%">
-      <details key="start" value="233"/>
-      <details key="end" value="239"/>
+      <details key="start" value="223"/>
+      <details key="end" value="234"/>
       <details key="line" value="8"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generateDepartment/%/%.1">
-      <details key="start" value="198"/>
-      <details key="end" value="214"/>
+      <details key="start" value="235"/>
+      <details key="end" value="241"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.4" references="/0/generateDepartment/%/%.1/aDepartment">
-      <details key="start" value="198"/>
-      <details key="end" value="209"/>
+    <eAnnotations source="positions.4" references="/0/generateDepartment/%/%.1/d">
+      <details key="start" value="235"/>
+      <details key="end" value="236"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/generateDepartment/%/%.2">
-      <details key="start" value="223"/>
-      <details key="end" value="230"/>
+      <details key="start" value="243"/>
+      <details key="end" value="363"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateDepartment/%/%.3">
+      <details key="start" value="363"/>
+      <details key="end" value="583"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateDepartment/%/%.3/%">
+      <details key="start" value="392"/>
+      <details key="end" value="412"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateDepartment/%/%.3/%.1">
+      <details key="start" value="413"/>
+      <details key="end" value="419"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.6" references="/0/generateDepartment/aDepartment">
+    <eAnnotations source="positions.9" references="/0/generateDepartment/%/%.3/%.1/c">
+      <details key="start" value="413"/>
+      <details key="end" value="414"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateDepartment/%/%.3/%.2">
+      <details key="start" value="421"/>
+      <details key="end" value="442"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateDepartment/%/%.3/%.3">
+      <details key="start" value="443"/>
+      <details key="end" value="450"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateDepartment/%/%.3/%.3/c">
+      <details key="start" value="443"/>
+      <details key="end" value="444"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateDepartment/%/%.3/%.4">
+      <details key="start" value="452"/>
+      <details key="end" value="476"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateDepartment/%/%.3/%.5">
+      <details key="start" value="477"/>
+      <details key="end" value="486"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateDepartment/%/%.3/%.5/c">
+      <details key="start" value="477"/>
+      <details key="end" value="478"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateDepartment/%/%.3/%.6">
+      <details key="start" value="488"/>
+      <details key="end" value="503"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateDepartment/%/%.3/%.7">
+      <details key="start" value="504"/>
+      <details key="end" value="510"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateDepartment/%/%.3/%.7/c">
+      <details key="start" value="504"/>
+      <details key="end" value="505"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateDepartment/%/%.3/%.8">
+      <details key="start" value="512"/>
+      <details key="end" value="577"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateDepartment/%/%.3/c">
+      <details key="start" value="369"/>
+      <details key="end" value="379"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateDepartment/%/%.3/%.9">
+      <details key="start" value="380"/>
+      <details key="end" value="389"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateDepartment/%/%.3/%.9/d">
+      <details key="start" value="380"/>
+      <details key="end" value="381"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateDepartment/%/%.4">
+      <details key="start" value="584"/>
+      <details key="end" value="594"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateDepartment/%/%.5">
+      <details key="start" value="188"/>
+      <details key="end" value="204"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateDepartment/%/%.5/%">
+      <details key="start" value="188"/>
+      <details key="end" value="194"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateDepartment/%/%.5/%/d">
+      <details key="start" value="188"/>
+      <details key="end" value="189"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateDepartment/%/%.5/%.1">
+      <details key="start" value="197"/>
+      <details key="end" value="204"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateDepartment/%/%.6">
+      <details key="start" value="213"/>
+      <details key="end" value="220"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateDepartment/d">
       <details key="start" value="147"/>
-      <details key="end" value="171"/>
+      <details key="end" value="161"/>
       <details key="line" value="5"/>
     </eAnnotations>
   </ecore:EAnnotation>

@@ -97,7 +97,7 @@ public interface Person extends EObject {
 	 * @return the value of the '<em>Fullname</em>' attribute.
 	 * @see #setFullname(String)
 	 * @see ra.RaPackage#getPerson_Fullname()
-	 * @model required="true" volatile="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	String getFullname();

@@ -2,9 +2,26 @@
 [module GenDepartment('platform:/resource/EconomicsProgramm01/model/ra.ecore')]
 
 
-[template public generateDepartment(aDepartment : Department)]
+[template public generateDepartment(d : Department)]
 [comment @main/]
-[file (aDepartment.Name, false, 'UTF-8')]
-hello
+[file (d.Name + '.html', false, 'UTF-8')]
+<html>
+<h1>[d.Name/] Department<h1>
+
+<h4>You will find below the courses of the Master in Economics programme for the first 2 years 
+</h4>
+
+[for (c : Course|d.Courses)]
+	<p>
+	<h4>Emnekode: [c.code/]</h4>
+	<h4>Emnenavn: [c.label/]</h4>
+	<h4>Studiepoeng: [c.Credits/]</h4>
+	<h4>År: [c.Year/]</h4>
+	-----------------------------------------------------</p>
+[/for]
+
+
+
+<html>
 [/file]
 [/template]

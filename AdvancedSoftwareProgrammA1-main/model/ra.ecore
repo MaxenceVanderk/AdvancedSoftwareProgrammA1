@@ -23,7 +23,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="CoursesTaught" lowerBound="1"
         eType="#//Course"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Fullname" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" volatile="true"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Department">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Coordinator" upperBound="-1"

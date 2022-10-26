@@ -92,6 +92,16 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	protected static final String FULLNAME_EDEFAULT = null;
 
 	/**
+	 * The cached value of the '{@link #getFullname() <em>Fullname</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFullname()
+	 * @generated
+	 * @ordered
+	 */
+	protected String fullname = FULLNAME_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -196,9 +206,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @generated
 	 */
 	public String getFullname() {
-		// TODO: implement this method to return the 'Fullname' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return fullname;
 	}
 
 	/**
@@ -207,9 +215,10 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @generated
 	 */
 	public void setFullname(String newFullname) {
-		// TODO: implement this method to set the 'Fullname' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		String oldFullname = fullname;
+		fullname = newFullname;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RaPackage.PERSON__FULLNAME, oldFullname, fullname));
 	}
 
 	/**
@@ -296,7 +305,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 			case RaPackage.PERSON__COURSES_TAUGHT:
 				return coursesTaught != null;
 			case RaPackage.PERSON__FULLNAME:
-				return FULLNAME_EDEFAULT == null ? getFullname() != null : !FULLNAME_EDEFAULT.equals(getFullname());
+				return FULLNAME_EDEFAULT == null ? fullname != null : !FULLNAME_EDEFAULT.equals(fullname);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -315,6 +324,8 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 		result.append(firstName);
 		result.append(", LastName: ");
 		result.append(lastName);
+		result.append(", Fullname: ");
+		result.append(fullname);
 		result.append(')');
 		return result.toString();
 	}

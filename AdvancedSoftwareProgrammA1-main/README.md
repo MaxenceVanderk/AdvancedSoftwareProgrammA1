@@ -29,6 +29,17 @@ Then we have the instance Sok1000 that represents a course, with its name, its c
 
 ![image](https://user-images.githubusercontent.com/99428112/192162251-020a93d2-5430-47aa-927f-5a570d1847ee.png)
 
+Assignment 2
+
+Warning: I think that the program page no longer exists because I can't find it.
+
+In this second assignment I tried to represent the data contained in the following page
+
+![image](https://user-images.githubusercontent.com/99428112/192161099-0aee3ee4-6eb9-48fe-a5b7-198f37524765.png)
+
+This is the information about the master's courses in economics of the first two years.
+You can find information about the year of study, the credit weight, the course labels and the course code
+
 
 
 
