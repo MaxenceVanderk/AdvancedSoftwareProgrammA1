@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ra:Person xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ra="platform:/reesource/EconomicsProgramm01/model/ra.ecore"
-    xsi:schemaLocation="platform:/reesource/EconomicsProgramm01/model/ra.ecore ra.ecore"
-    FirstName="Per "
-    LastName="Tovmo"
-    Fullname="Per Tovmo"/>
