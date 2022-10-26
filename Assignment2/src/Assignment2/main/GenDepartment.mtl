@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module GenDepartment('platform:/resource/EconomicsProgramm01/model/ra.ecore')]
+
+
+[template public generateDepartment(aDepartment : Department)]
+[comment @main/]
+[file (aDepartment.Name, false, 'UTF-8')]
+hello
+[/file]
+[/template]
